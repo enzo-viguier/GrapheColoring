@@ -8,6 +8,8 @@ public class Main {
 
     public static void main(String[] args) {
 
+        System.out.println("Algorithme de Chaitin par Enzo VIGUIER et Aurélien MILLA\n");
+
         while (true) {
 
             System.out.println("Action : ");
