@@ -3,9 +3,9 @@ package GrapheColoring;
 public class Sommet {
 
     int couleur = -1;
-    int nom;
+    String nom;
 
-    public Sommet(int nom){
+    public Sommet(String nom){
         this.nom = nom;
     }
 
@@ -13,7 +13,7 @@ public class Sommet {
         return couleur;
     }
 
-    public int getNom() {
+    public String getNom() {
         return nom;
     }
 

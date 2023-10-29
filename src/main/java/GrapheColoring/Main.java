@@ -8,8 +8,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("Algorithme de Chaitin par Enzo VIGUIER et Aurélien MILLA\n");
-
         while (true) {
 
             System.out.println("Action : ");
@@ -86,10 +84,10 @@ public class Main {
         // Graphe avec du spill
         // Premier affichage avec la version pessimiste de l'algorithme, et le deuxieme avec la version optimiste.
 
-        Sommet s10 = new Sommet(10);
-        Sommet s11 = new Sommet(11);
-        Sommet s12 = new Sommet(12);
-        Sommet s13 = new Sommet(13);
+        Sommet s10 = new Sommet("A");
+        Sommet s11 = new Sommet("B");
+        Sommet s12 = new Sommet("C");
+        Sommet s13 = new Sommet("D");
 
         Arete a10 = new Arete(s10,s11);
         Arete a11 = new Arete(s11,s12);
@@ -140,11 +138,11 @@ public class Main {
 
         // Graphe avec des preferences
 
-        Sommet s6 = new Sommet(6);
-        Sommet s7 = new Sommet(7);
-        Sommet s8 = new Sommet(8);
-        Sommet s9 = new Sommet(9);
-        Sommet s14 = new Sommet(10);
+        Sommet s6 = new Sommet("A");
+        Sommet s7 = new Sommet("B");
+        Sommet s8 = new Sommet("C");
+        Sommet s9 = new Sommet("D");
+        Sommet s14 = new Sommet("E");
 
         Arete a6 = new Arete(s6,s7);
         Arete a7 = new Arete(s6,s8);
@@ -189,11 +187,11 @@ public class Main {
         Graphe graphe;
 
         // Graphe simple
-        Sommet s1 = new Sommet(1);
-        Sommet s2 = new Sommet(2);
-        Sommet s3 = new Sommet(3);
-        Sommet s4 = new Sommet(4);
-        Sommet s5 = new Sommet(5);
+        Sommet s1 = new Sommet("A");
+        Sommet s2 = new Sommet("B");
+        Sommet s3 = new Sommet("C");
+        Sommet s4 = new Sommet("D");
+        Sommet s5 = new Sommet("E");
 
         Arete a1 = new Arete(s1,s2);
         Arete a2 = new Arete(s1,s3);
@@ -246,7 +244,7 @@ public class Main {
         if(!graphe.getSommets().isEmpty()) {
             boolean estTrouve = false;
 
-            Sommet sommetTrivial = new Sommet(-1);
+            Sommet sommetTrivial = new Sommet("vide");
             for (Sommet sommet : graphe.getSommets()) {
                 if (graphe.trivialementColorable(sommet, nbColor)) {
                     estTrouve = true;
@@ -273,7 +271,7 @@ public class Main {
 
             } else { // Non trivialement colorable
 
-                Sommet sommetDegreMax = new Sommet(-1);
+                Sommet sommetDegreMax = new Sommet("vide");
                 for (Sommet sommet : graphe.getSommets()) {
                     if (graphe.interDegre(sommet) == graphe.maximumDegre()) {
                         sommetDegreMax = sommet;
