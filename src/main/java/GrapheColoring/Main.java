@@ -1,7 +1,6 @@
 package GrapheColoring;
 
 import java.util.ArrayList;
-import java.io.Console;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
