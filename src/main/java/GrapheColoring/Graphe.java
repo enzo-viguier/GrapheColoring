@@ -22,13 +22,13 @@ public class Graphe {
     }
 
     public int interDegre(Sommet s) {
-        int count = 0;
+        int compteur = 0;
         for (Arete a : aretesInterferences) {
             if (a.implique(s)) {
-                count++;
+                compteur++;
             }
         }
-        return count;
+        return compteur;
     }
 
     public int maximumDegre(){
@@ -118,6 +118,22 @@ public class Graphe {
 
     public ArrayList<Sommet> getSommets() {
         return sommets;
+    }
+
+    public void afficherRelation() {
+
+        System.out.println("--------------------------");
+        System.out.println("Relation du graphe : ");
+
+        for (Arete arete : this.aretesInterferences) {
+            System.out.println(arete.getArete());
+        }
+
+        for (Arete arete : this.aretesPreferences) {
+            System.out.println(arete.getArete());
+        }
+        System.out.println("--------------------------\n");
+
     }
 
     @Override

@@ -2,7 +2,7 @@ package GrapheColoring;
 
 public class Arete {
 
-    Sommet sommets[] = new Sommet[2];
+    Sommet[] sommets = new Sommet[2];
 
     public Arete(Sommet s1, Sommet s2){
         this.sommets[0] = s1;
@@ -11,6 +11,10 @@ public class Arete {
 
     public boolean implique(Sommet s) {
         return (sommets[0].equals(s)|| sommets[1].equals(s));
+    }
+
+    public String getArete(){
+        return sommets[0].getNom() + " -> " + sommets[1].getNom();
     }
 
     @Override

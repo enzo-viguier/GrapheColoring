@@ -13,6 +13,10 @@ public class Sommet {
         return couleur;
     }
 
+    public int getNom() {
+        return nom;
+    }
+
     public void setCouleur(int couleur) {
         this.couleur = couleur;
     }
